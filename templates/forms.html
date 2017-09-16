@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            {% if title %}
+                <h1 class="{% if title_align_center %}text-align-center{% endif %}">{{ title }}  </h1>
+            {% endif %}
+            <form method='POST' action=''>{% csrf_token %}
+                {{ form| crispy }}
+                <input class='btn btn-default' type='submit' value='Submit'/>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% comment %}
+<div class="input-group"> example
+    <span class="input-group-addon">@</span>
+    <input type="text" class="form-control" placeholder="Example">
+</div>
+<hr>
+<div id="div_id_full_name" class="control-group">
+    <label for="id_full_name" class="control-label ">Full name</label>
+    <div class="controls">
+        <input class="form-control" id="id_full_name" name="full_name" type="text">
+    </div>
+</div>
+<div id="div_id_email" class="control-group error">
+    <label for="id_email" class="control-label requiredField">Email<span class="asteriskField">*</span>
+    </label>
+    <div class="controls">
+        <input class="form-control" id="id_email" name="email" type="email">
+        <p id="error_1_id_email" class="help-block"><strong>Обязательное поле.</strong></p>
+    </div>
+</div>
+<div id="div_id_message" class="control-group">
+    <label for="id_message" class="control-label requiredField">Message<span
+            class="asteriskField">*</span> </label>
+    <div class="controls">
+        <input class="form-control" id="id_message" name="message" type="text">
+    </div>
+</div>
+<hr>{% endcomment %}

@@ -1,0 +1,20 @@
+.text-align-center {
+    text-align: center;
+
+}
+
+.text-14px {
+    font-size: 14px;
+}
+
+/*.textinput {*/
+    /*width: 1000px;*/
+    /*min-width: 100px;*/
+
+/*}*/
+
+.textInput {
+    width: 1000px;
+    min-width: 100px;
+
+}

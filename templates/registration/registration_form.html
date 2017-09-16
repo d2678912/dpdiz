@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{#    <div class="col-sm-8 col-sm-offset-2">#}
+{#        <h1 class="text-align-center">Регистрируйся прямо сейчас;)</h1>#}
+        <div class='row'>
+            <div class='col-sm-6 col-sm-offset-4'>
+                <h1 class="text-align-center">Регистрируйся прямо сейчас!</h1>
+                <form method="post" action=".">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <input class='btn  btn-primary' type="submit" value="{% trans 'Submit' %}"/>
+                </form>
+            </div>
+        </div>
+{#    </div>#}
+    <hr/>
+    <div class='row'>
+        <div class='col-sm-6 col-sm-offset-3 text-align-center'>
+            <p>Уже есть аккаунт? <a href="{% url 'auth_login' %}">Войти</a></p>
+        </div>
+    </div>
+{% endblock %}
