@@ -8,13 +8,13 @@
 }
 
 /*.textinput {*/
-    /*width: 1000px;*/
+    /*width: px;*/
     /*min-width: 100px;*/
 
 /*}*/
 
-.textInput {
-    width: 1000px;
-    min-width: 100px;
+/*.textInput {*/
+    /*width: px;*/
+    /*min-width: 400px;*/
 
-}
+/*}*/
