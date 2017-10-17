@@ -8,13 +8,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'home' %}">ПМЖ Landing тест</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Компания Максимет</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{% url 'home' %}">Главная</a></li>
-                <li><a href="{% url 'about' %}">О нас</a></li>
-                <li><a href="{% url 'contact' %}">Контакты</a></li>
+                <li><a href="{% url 'productsnservices' %}">ТОВАРЫ И УСЛУГИ</a></li>
+                <li><a href="{% url 'about' %}">О КОМПАНИИ</a></li>
+                <li><a href="{% url 'ourcontact' %}">КОНТАКТЫ</a></li>
+                <li><a href="{% url 'contact' %}">ОБРАТНАЯ СВЯЗЬ</a></li>
+
                 {#                <li class="dropdown">#}
                 {#                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"#}
                 {#                       aria-expanded="false">Dropdown <span class="caret"></span></a>#}
@@ -30,23 +32,24 @@
                 {#                </li>#}
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                {% if request.user.is_authenticated %}
-                    <li><a href="{% url 'auth_logout' %}">Выйти</a></li>
-                {% else %}
-                    <form class="navbar-form navbar-right" method="POST" action="">{% csrf_token %}
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="username" placeholder="Username"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" name="password" placeholder="Pasword"/>
-                        </div>
-                        <button type="submit" class="btn btn-default">Войти</button>
-                    </form>
+{#            КНОПКА РЕГИСТРАЦИИ#}
+{#            <ul class="nav navbar-nav navbar-right">#}
+{#                {% if request.user.is_authenticated %}#}
+{#                    <li><a href="{% url 'auth_logout' %}">Выйти</a></li>#}
+{#                {% else %}#}
+{#                    <form class="navbar-form navbar-right" method="POST" action="">{% csrf_token %}#}
+{#                        <div class="form-group">#}
+{#                            <input type="text" class="form-control" name="username" placeholder="Username"/>#}
+{#                        </div>#}
+{#                        <div class="form-group">#}
+{#                            <input type="password" class="form-control" name="password" placeholder="Pasword"/>#}
+{#                        </div>#}
+{#                        <button type="submit" class="btn btn-default">Войти</button>#}
+{#                    </form>#}
                     {#                    <li><a href="{% url 'auth_login' %}">Войти</a></li>#}
-                    <li><a href="{% url 'registration_register' %}">Регистрация</a></li>
-                {% endif %}
-            </ul>
+{#                    <li><a href="{% url 'registration_register' %}">Регистрация</a></li>#}
+{#                {% endif %}#}
+{#            </ul>#}
         </div><!--/.nav-collapse -->
     </div>
 </nav>

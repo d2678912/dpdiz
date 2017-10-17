@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
+{% load staticfiles %}
 
-{% block head_title %}Welcome|{{ block.super }}{% endblock %} {% comment %}Tab's calling{% endcomment %}
+{% block head_title %}Главная|{{ block.super }}{% endblock %} {% comment %}Tab's calling{% endcomment %}
 
 <style>
     {% block style %}
@@ -15,7 +16,7 @@
 
         <div class="row">
             <div class="col-sm-6">
-                <h1>Trydjango 1.8 example</h1>
+                <h1>Тестовая страница</h1>
                 <p>The MVP Landing project is designed to get your project started. The goal is to help you launch as
                     soon
                     as possible with the least amount of investment using time or money. Join Us today.</p>
@@ -23,7 +24,11 @@
                     <a class="btn btn-sm btn-primary" href="" role="button">Join US &raquo;</a>
                 </p>
             </div>
-            <div class="col-sm-6" style="background-color: black; height: 250px;">
+            <div class="col-sm-6" {% comment %}style="background-color: black;{% endcomment %} height: 320px;">
+{#                <img src="{% static "my_app/максимет-черный-лом-погрузка.jpg" %}" alt="My image"/>#}
+{#                <img class="container-fluid" src="{% static "img/максимет-черный-лом-погрузка.jpg" %}" hspace="" vspace="10" width="500" height="300" alt="максимет-черный-лом-погрузка">#}
+                <img class="container-fluid" src="{% static "img/vgif-ru-23843.gif" %}" hspace="" vspace="10" width="500" height="300" alt="максимет-черный-лом-погрузка">
+
             </div>
         </div>
     </div>
@@ -32,11 +37,11 @@
 {% block content %}
     <div class="row">
         <div class="col-sm-3 pull-right">
-            <p class="lead">{{ title }}</p>
-            <form method='POST' action=''>{% csrf_token %}
+            <p class="lead">Место для контента{% comment %}{{ title }}{% endcomment %}</p>
+            {% comment %}<form method='POST' action=''>{% csrf_token %}
                 {{ form| crispy }}
                 <input class="btn btn-sm btn-primary" type='submit' value='Sign Up'/>
-            </form>
+            </form>{% endcomment %}
         </div>
         <div class="col-sm-3 ">
             <p class='lead text-align-center text-14px'> Built with Django &amp; Bootstrap</p>

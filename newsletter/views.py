@@ -49,7 +49,13 @@ def contact(request):
     }
     return render(request, "forms.html", context)
 
+def ourcontact(request):
+    return render(request, 'ourcontact.html', {})
 
+def about(request):
+    return render(request, 'about.html', {})
+def productsnservices(request):
+    return render(request, 'productsnservices.html', {})
 
 
 

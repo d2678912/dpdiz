@@ -2,6 +2,8 @@
 {% load crispy_forms_tags %}
 {% load staticfiles %}
 
+{% block head_title %}Обратная связь|{{ block.super }}{% endblock %} {% comment %}Tab's calling{% endcomment %}
+
 {% block content %}
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
