@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +8,701 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <title>{% block head_title %}{% endblock %}Максимет</title>
-    {% include "head_css.html" %}
-    <style>
-        {% block style %}
-        {%  endblock %}
-    </style>
-</head>
-<body>
-<!-- Static navbar from navbar.html -->
-{% include 'navbar.html' %}
 
-<div class="container">
-    {% block jumbotron %}
-    {% endblock %}
-    {% block content %}
-    {% endblock %}
-</div> <!-- /container -->
+    <title>ДП ДІЗ{% block head_title %}{% endblock %}</title>
+
+    <!-- css links -->
+    {% include "head_css.html" %}
+
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!-- Fixed navbar -->
+{% include 'navbar.html' %}
+<!-- /Fixed navbar -->
 
 {% include "javascript.html" %}
 
+<!-- Banner -->
+<div class="banner">
+    <div id="content">
+        <div id="slider">
+            <img src="{% static 'images/banner1.jpg' %}" alt="Ми пропонуємо" data-url="#1">
+            <img src="{% static 'images/banner2.jpg' %}" alt="Послуги" data-url="#2">
+            <img src="{% static 'images/banner3.jpg' %}" alt="Землеустрою" data-url="#3">
+            <img src="{% static 'images/banner4.jpg' %}" alt="Та геодезії" data-url="#4">
+        </div>
+    </div>
+</div>
+<!-- /Banner -->
+
+<!-- About -->
+<section class="about-us" id="about">
+    <h3 class="text-center slideanim">Державне Підприємство Дніпровський Інститут Землеустрою</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-1 slideanim">
+                <p>
+                    виконує повний спектр землевпорядних робіт.
+                    Наш інститут є державним, тому Ви можете бути переконані, що всі роботи будуть проведені
+                    в рамках чинного законодавства, в найкоротший термін.
+                </p>
+                <p> В інституті працюють висококваліфіковані
+                    спеціалісти в області землеустрою, які зможуть допомогти у вирішенні різних земельних питань.
+                    Ви можете бути переконані в якості робіт, які виконує інститут.
+                </p>
+                <p> ДП «Дніпровський інститут землеустрою» виконує землевпорядні, землеоціночні,
+                    топографо–геодезичні та картографічні роботи для юридичних та фізичних осіб.
+                    <br><br><br><br><br><br><br><br>
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<div class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <div class="content1">
+                    <h3 class="section-heading slideanim">Відділ землеустрою</h3>
+                    <hr class="section-heading-spacer slideanim">
+                    <div class="clearfix"></div>
+                    <div class="lead slideanim">
+                        <p class="lead slideanim"> Розробка:</p>
+                        <p class="lead slideanim">
+                            - проекти землеустрою</p>
+                        <p class="lead slideanim">
+                            - схеми і техніко-економічні обгрунтування</p>
+                        <p class="lead slideanim">
+                            - проекти щодо організації і встановлення меж територій</p>
+                        <p class="lead slideanim">
+                            - комплексні роботи під ключ від отримання дозволу до реєстрації в
+                            юстиції</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6 slideanim">
+                <ul class="grid cs-style">
+                    <li>
+                        <figure>
+                            <img src="{% static 'images/dpdiz_zemleustriy.jpg' %}" alt="" class="img-responsive">
+                            <figcaption>
+                                <h3>Відділ землеустрою</h3>
+                                <p>_____</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% comment %}ВІДДІЛ ОЦІНКИ ЗЕМЕЛЬ{% endcomment %}
+<div class="content-section-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6">
+                <div class="content2">
+                    <h3 class="section-heading slideanim">Відділ оцінки земель</h3>
+                    <hr class="section-heading-spacer slideanim">
+                    <div class="clearfix"></div>
+                    <p class="lead slideanim">
+                        - нормативна грошова оцінка земельних ділянок
+                    </p>
+                    <p class="lead slideanim">
+                        - правильне визначення розміру орендної плати
+                    </p>
+                    <p class="lead slideanim">
+                        - визначення розміру державного мита
+                    </p>
+                    <p class="lead slideanim">
+                        - досвід роботи у виготовленні робочих проектів землеустрою
+                    </p>
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-pull-6 col-sm-6 slideanim">
+                <ul class="grid cs-style">
+                    <li>
+                        <figure>
+                            <img src="{% static 'images/dpdiz_ocinka2.jpg' %}" alt="" class="img-responsive">
+                            <figcaption>
+                                <h3>Відділ оцінки земель</h3>
+                                <p> ...</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% comment %}ВІДДІЛ ГЕОДЕЗІЇ{% endcomment %}
+<div class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <div class="content3">
+                    <h3 class="section-heading slideanim">Відділ топографії та геодезії</h3>
+                    <hr class="section-heading-spacer slideanim">
+                    <div class="clearfix"></div>
+                    <p class="lead slideanim">Виконання топографо-геодезичних робіт для основного спектру
+                        документацій із землеустрою та виготовлення технічних документацій із землеустрою
+                        щодо встановлення меж земельних ділянок</p>
+                    <p class="lead slideanim">Постійними замовниками відділу є ПАТ "Орджонікідзевський
+                        гірничо-збагачувальний комбінат, ТОВ "ПЕРША УКРАЇНСЬКА ГАЗОНАФТОВА КОМПАНІЯ",
+                        фермерські господарства та громадяни Дніпропетровської області</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6 slideanim">
+                <ul class="grid cs-style">
+                    <li>
+                        <figure>
+                            <img src="{% static 'images/dpdiz_geodeziya.jpg' %}" alt="" class="img-responsive">
+                            <figcaption>
+                                <h3>Відділ топографії та геодезії</h3>
+                                <p>...</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /About -->
+
+
+<!-- /Services -->
+<section class="our-services" id="services">
+    <h3 class="text-center slideanim">Наші послуги</h3>
+    <ul class="ch-grid">
+        <li>
+            <div class="ch-item ch-img-1 slideanim">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-1"></div>
+                        <div class="ch-info-back">
+                            <h5>Землевпорядні роботи</h5>
+                            <p>___</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="slideanim">Землевпорядні роботи</h4>
+            <p class="slideanim">- проекти землеустрою<br>
+
+                - схеми і техніко-економічні обгрунтування<br>
+
+                - проекти щодо організації і встановлення меж територій<br>
+
+                - комплексні роботи під ключ від отримання дозволу до реєстрації в
+                юстиції<br><br></p>
+        </li>
+        <li>
+            <div class="ch-item ch-img-2 slideanim">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-2"></div>
+                        <div class="ch-info-back">
+                            <h5>Землеоціночні роботи</h5>
+                            <p>__</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="slideanim">Землеоціночні роботи</h4>
+            <p class="slideanim">- нормативна грошова оцінка земельних ділянок<br>
+                - правильне визначення розміру орендної плати<br>
+                - визначення розміру державного мита<br>
+
+                - досвід роботи у виготовленні робочих проектів землеустрою<br></p>
+            </div>
+        </li>
+        <li>
+            <div class="ch-item ch-img-3 slideanim">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-3"></div>
+                        <div class="ch-info-back">
+                            <h5>Топографія і геодезія</h5>
+                            <p>__</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="slideanim">Топографо-геодезичні роботи</h4>
+            <p class="slideanim">Виконання топографо-геодезичних робіт для основного спектру
+                        документацій із землеустрою та виготовлення технічних документацій із землеустрою
+                        щодо встановлення меж земельних ділянок</p>
+        </li>
+        <li>
+            <div class="ch-item ch-img-4 slideanim">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-4"></div>
+                        <div class="ch-info-back">
+                            <h5>Картографія</h5>
+                            <p>__</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="slideanim">Картографічні роботи</h4>
+            <p class="slideanim">сабж<br><br><br><br><br><br><br><br><br></p>
+        </li>
+    </ul>
+</section>
+<!-- /Services -->
+<!-- Portfolio Grid Section -->
+{% comment %}<section id="portfolio">
+    <h3 class="text-center slideanim">Our Portfolio</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-paper-plane-o"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/port1.jpg' %}" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-paper-plane-o"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/port2.jpg' %}" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-paper-plane-o"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/port3.jpg' %}" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
+                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-paper-plane-o"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/port4.jpg' %}" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
+                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-paper-plane-o"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/port5.jpg' %}" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
+                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-paper-plane-o"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/port6.jpg' %}" class="img-responsive" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Portfolio Grid Section -->
+<!-- Portfolio Modals -->
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h3>Vegetable Farm</h3>
+                        <hr>
+                        <img src="{% static 'images/port1.jpg' %}" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h3>Vegetable Farm</h3>
+                        <hr>
+                        <img src="{% static 'images/port2.jpg' %}" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h3>Vegetable Farm</h3>
+                        <hr>
+                        <img src="{% static 'images/port3.jpg' %}" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h3>Vegetable Farm</h3>
+                        <hr>
+                        <img src="{% static 'images/port4.jpg' %}" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h3>Vegetable Farm</h3>
+                        <hr>
+                        <img src="{% static 'images/port5.jpg' %}" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h3>Vegetable Farm</h3>
+                        <hr>
+                        <img src="{% static 'images/port6.jpg' %}" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Portfolio Modals -->
+<!-- Blog -->
+<section class="our-blog" id="blog">
+    <h3 class="text-center slideanim">Our Blog</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-xs-12">
+                <div class="view view-seventh slideanim">
+                    <img src="{% static 'images/blog1.jpg' %}" alt="" class="img-responsive"/>
+                    <div class="mask">
+                        <h5>January 2,2016</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#contact-info" class="info">Write To Us</a>
+                    </div>
+                </div>
+                <div class="blog-content slideanim">
+                    <p class="p1">News - January 2,2016</p>
+                    <a href="#"><h4>Its The Vegetable Farm You Can See.</h4></a>
+                    <p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <div class="view view-seventh slideanim">
+                    <img src="{% static 'images/blog2.jpg' %}" alt="" class="img-responsive"/>
+                    <div class="mask">
+                        <h5>January 10,2016</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#contact-info" class="info">Write To Us</a>
+                    </div>
+                </div>
+                <div class="blog-content slideanim">
+                    <p class="p1">News - January 10,2016</p>
+                    <a href="#"><h4>A Day With Vegetable Farm.</h4></a>
+                    <p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <div class="view view-seventh slideanim">
+                    <img src="{% static 'images/blog3.jpg' %}" alt="" class="img-responsive"/>
+                    <div class="mask">
+                        <h5>January 15,2016</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#contact-info" class="info">Write To Us</a>
+                    </div>
+                </div>
+                <div class="blog-content slideanim">
+                    <p class="p1">News - January 15,2016</p>
+                    <a href="#"><h4>Vegetable Farm For All.</h4></a>
+                    <p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <div class="view view-seventh slideanim">
+                    <img src="{% static 'images/blog4.jpg' %}" alt="" class="img-responsive"/>
+                    <div class="mask">
+                        <h5>January 20,2016</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#contact-info" class="info">Write To Us</a>
+                    </div>
+                </div>
+                <div class="blog-content slideanim">
+                    <p class="p1">News - January 20,2016</p>
+                    <a href="#"><h4>Vegetable Farm For Your Life.</h4></a>
+                    <p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Blog -->
+<!-- Contact-Us -->
+<section class="contact-us" id="contact">
+    <h3 class="text-center slideanim">Contact Us</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-12 slideanim">
+                <iframe class="googlemaps"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d380510.6741687111!2d-88.01234121699822!3d41.83390417061058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1455598377120"
+                        frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-4 col-xs-12 slideanim">
+                <h4>Our Contacts :</h4>
+                <p>Phone:123.456.7890</p>
+                <p>Email:<a href="mailto:name@example.com">name@example.com</a></p>
+                <p>Address:3481 Melrose Place,Beverly Hills, Chicago 90210.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</section>
+<!-- /Contact-Us -->
+<!-- Contact-Form -->
+<section class="contact-form slideanim">
+    <h3 class="text-center">Contact Form</h3>
+    <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form role="form">
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label>Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label>Phone Number</label>
+                            <input type="tel" class="form-control">
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-12">
+                            <label>Message</label>
+                            <textarea class="form-control" rows="6"></textarea>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <button type="submit" href="#" class="btn btn-lg btn-outline">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Contact-Form -->
+<!-- Footer -->
+<footer class="text-center slideanim slide">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h4>Location</h4>
+                    <p>3481 Melrose Place<br>Beverly Hills, Chicago 90210</p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h4>Around the Web</h4>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h4>About Vegetable Farm</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>© 2016 Vegetable Farm. All Rights Reserved | Design by <a href="https://w3layouts.com/"
+                                                                                 target="_blank">W3layouts</a></p>
+                </div>
+            </div>
+        </div>
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+    </div>
+</footer>{% endcomment %}
+<!-- js files -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/classie.js' %}"></script>
+<script src="{% static 'js/TweenMax.min.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/index2.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top,
+            }, 900, function () {
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        });
+    })
+</script>
+<script>
+    $(window).scroll(function () {
+        $(".slideanim").each(function () {
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+                $(this).addClass("slide");
+            }
+        });
+    });
+</script>
+<!-- /js files -->
 </body>
 </html>
+
